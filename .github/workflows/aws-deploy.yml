@@ -4,3 +4,22 @@ on:
   push:
     branches:
       - master
+
+permissions:
+  id-token: write # This is required for requesting the JWT
+
+jobs:
+  build-and-publish-images:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::237033183304:role/GitHubActionsRol
+          aws-region: us-east-1
+      - name: Test AWS Authentication
+        run: |
+          aws sts get-caller-identity
