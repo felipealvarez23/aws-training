@@ -1,5 +1,5 @@
 # Utiliza una imagen base con solo el JRE
-FROM openjdk:17-jre-slim
+FROM eclipse-temurin:17-jre
 
 # Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
