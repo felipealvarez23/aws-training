@@ -8,7 +8,7 @@ public class GreetingController {
 
     @GetMapping("greeting")
     public String sayHello() {
-        return "Hello my dear friends!";
+        return "Hello my dear friends!!";
     }
 
 }
