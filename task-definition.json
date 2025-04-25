@@ -1,0 +1,64 @@
+{
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:237033183304:task-definition/aws-training-task:1",
+  "containerDefinitions": [
+    {
+      "name": "aws-training",
+      "image": "237033183304.dkr.ecr.us-east-1.amazonaws.com/aws-training-ecr:latest",
+      "cpu": 0,
+      "portMappings": [
+        {
+          "name": "aws-training-8080-port",
+          "containerPort": 80,
+          "hostPort": 80,
+          "protocol": "tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "essential": true,
+      "environment": [],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "ulimits": [],
+      "systemControls": []
+    }
+  ],
+  "family": "aws-training-task",
+  "executionRoleArn": "arn:aws:iam::237033183304:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "revision": 1,
+  "volumes": [],
+  "status": "ACTIVE",
+  "requiresAttributes": [
+    {
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "name": "ecs.capability.execution-role-ecr-pull"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "name": "ecs.capability.task-eni"
+    }
+  ],
+  "placementConstraints": [],
+  "compatibilities": [
+    "EC2",
+    "FARGATE"
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "1024",
+  "memory": "2048",
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "registeredAt": "2025-04-25T15:15:03.899Z",
+  "registeredBy": "arn:aws:iam::237033183304:root",
+  "enableFaultInjection": false,
+  "tags": []
+}
