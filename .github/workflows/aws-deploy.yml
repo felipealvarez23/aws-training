@@ -78,6 +78,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: aws-training-task-service-3ar1e6tn
+          service: aws-training-task-service-en8gtiop
           cluster: aws-training-cluster
           wait-for-service-stability: true
