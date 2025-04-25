@@ -30,6 +30,11 @@ jobs:
         with:
           gradle-version: ${{ env.GRADLE_VERSION }}
 
+      - name: Build Spring Boot Application with Gradle
+        run: |
+          chmod +x gradlew
+          ./gradlew build   
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
